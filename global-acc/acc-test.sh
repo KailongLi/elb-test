@@ -1,8 +1,8 @@
 eip=139.159.150.214
-proxy_ip=192.168.1.188
-nginx_proxy_ip=192.168.1.165
+proxy_ip=192.168.1.189
+nginx_proxy_ip=192.168.1.74
 
-for i in {1..1}
+for i in {1..10}
 do
 echo "=======$i round start======"
 nohup tcpdump -i eth0 host $eip -nnev -w eip-https-${i}.pcap &
@@ -21,7 +21,7 @@ killall tcpdump
 sleep 1
 
 nohup tcpdump -i eth0 host $proxy_ip -nnev -w lvs-http-${i}.pcap &
-curl https://$proxy_ip:8080 -k 1> /dev/null 2>/dev/null
+curl http://$proxy_ip:8080 -k 1> /dev/null 2>/dev/null
 killall tcpdump
 sleep 1
 
@@ -37,14 +37,15 @@ killall tcpdump
 sleep 1
 
 nohup tcpdump -i eth0 host $nginx_proxy_ip -nnev -w nginx-http-$i-1st.pcap &
-curl https://$nginx_proxy_ip:80/proxy  -k 1> /dev/null 2>/dev/null
+curl http://$nginx_proxy_ip:80/proxy  -k 1> /dev/null 2>/dev/null
 killall tcpdump
 sleep 1
 
 nohup tcpdump -i eth0 host $nginx_proxy_ip -nnev -w nginx-http-$i-2nd.pcap &
-curl https://$nginx_proxy_ip:80/proxy  -k 1> /dev/null 2>/dev/null
+curl http://$nginx_proxy_ip:80/proxy  -k 1> /dev/null 2>/dev/null
 killall tcpdump
-sleep 1
+echo "please restart nginx proxy...."
+sleep 10
 echo "=======$i round end======="
 
 done

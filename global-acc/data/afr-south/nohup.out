@@ -1,32 +1,0 @@
-tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
-Got 7Got 21Got 106167 packets captured
-169 packets received by filter
-2 packets dropped by kernel
-tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
-Got 13Got 91106 packets captured
-106 packets received by filter
-0 packets dropped by kernel
-tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
-Got 38151 packets captured
-164 packets received by filter
-13 packets dropped by kernel
-tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
-Got 83152 packets captured
-153 packets received by filter
-1 packet dropped by kernel
-tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
-Got 2750 packets captured
-50 packets received by filter
-0 packets dropped by kernel
-tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
-Got 2948 packets captured
-48 packets received by filter
-0 packets dropped by kernel
-tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
-Got 7797 packets captured
-97 packets received by filter
-0 packets dropped by kernel
-tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes
-Got 7181 packets captured
-81 packets received by filter
-0 packets dropped by kernel
